@@ -30,14 +30,14 @@ export const Navbar = () => {
               <p className="text-xs text-muted-foreground">Your Community Library</p>
             </div>
           </Link>
-
-          {/* Right Side */}
-          <div className="flex items-center gap-3">
-            <Button variant="outline" asChild>
+ <Button variant="outline" asChild>
   <Link to="/about">
     About
   </Link>
 </Button>
+          {/* Right Side */}
+          <div className="flex items-center gap-3">
+           
 
 
             {/* PUBLIC PAGES → Only show Admin Login */}
