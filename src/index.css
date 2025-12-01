@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 35 20% 97%;
+    --foreground: 25 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 25 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 25% 15%;
+
+    --primary: 30 85% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 35 30% 88%;
+    --secondary-foreground: 25 25% 15%;
+
+    --muted: 35 20% 92%;
+    --muted-foreground: 25 15% 45%;
+
+    --accent: 25 75% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 30 85% 55%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 35 30% 95%;
+    --sidebar-foreground: 25 25% 15%;
+    --sidebar-primary: 30 85% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 35 30% 88%;
+    --sidebar-accent-foreground: 25 25% 15%;
+    --sidebar-border: 35 20% 88%;
+    --sidebar-ring: 30 85% 55%;
+
+    /* Custom library theme variables */
+    --library-gradient: linear-gradient(135deg, hsl(30 85% 55%) 0%, hsl(25 75% 65%) 100%);
+    --hero-gradient: linear-gradient(180deg, hsl(35 20% 97%) 0%, hsl(35 30% 92%) 100%);
+    --card-shadow: 0 4px 20px -4px hsl(30 85% 55% / 0.15);
+    --hover-shadow: 0 8px 30px -6px hsl(30 85% 55% / 0.25);
+  }
+
+  .dark {
+    --background: 25 30% 8%;
+    --foreground: 35 20% 95%;
+
+    --card: 25 25% 12%;
+    --card-foreground: 35 20% 95%;
+
+    --popover: 25 25% 12%;
+    --popover-foreground: 35 20% 95%;
+
+    --primary: 30 85% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 25 20% 18%;
+    --secondary-foreground: 35 20% 95%;
+
+    --muted: 25 20% 18%;
+    --muted-foreground: 35 15% 60%;
+
+    --accent: 25 75% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 25 20% 18%;
+    --input: 25 20% 18%;
+    --ring: 30 85% 55%;
+
+    --sidebar-background: 25 25% 12%;
+    --sidebar-foreground: 35 20% 95%;
+    --sidebar-primary: 30 85% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 25 20% 18%;
+    --sidebar-accent-foreground: 35 20% 95%;
+    --sidebar-border: 25 20% 18%;
+    --sidebar-ring: 30 85% 55%;
+
+    --card-shadow: 0 4px 20px -4px hsl(0 0% 0% / 0.4);
+    --hover-shadow: 0 8px 30px -6px hsl(30 85% 55% / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
