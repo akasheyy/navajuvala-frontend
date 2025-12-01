@@ -45,7 +45,7 @@ export const Navbar = () => {
               <Button variant="outline" asChild>
                 <Link to="/admin/login">
                   <LayoutDashboard className="w-4 h-4 mr-2" />
-                  Admin Login
+                  Admin
                 </Link>
               </Button>
             )}
