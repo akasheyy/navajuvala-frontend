@@ -88,8 +88,7 @@ const BorrowerDetail = () => {
   };
 
   const handleDelete = async () => {
-    if (!confirm("Delete this borrow record? This action cannot be undone.")) return;
-    try {
+      try {
       await deleteBorrowRecord(record._id);
       toast({ title: "Deleted", description: "Borrow record deleted" });
       navigate("/admin/borrow-records");
