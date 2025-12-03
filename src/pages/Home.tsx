@@ -57,7 +57,7 @@ const Home = () => {
             <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-library-gradient mb-4">
               <BookOpen className="w-8 h-8 text-primary-foreground" />
             </div>
-            <h2 className="text-4xl font-bold">Welcome to Navajuvala Vayanashala</h2>
+            <h2 className="text-4xl font-bold">Welcome to നവജ്വാല വായനശാല</h2>
             <p className="text-lg text-muted-foreground">
               Discover, explore and enjoy our extensive collection of books
             </p>
