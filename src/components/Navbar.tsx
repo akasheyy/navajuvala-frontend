@@ -30,7 +30,7 @@ export const Navbar = () => {
               </div>
               <div>
                 <h1 className="text-xl font-bold group-hover:text-primary transition-colors">
-                  Navajuvala Vayanashala
+                  Navajvaala Vayanashala
                 </h1>
                 <p className="text-xs text-muted-foreground">Your Community Library</p>
               </div>
