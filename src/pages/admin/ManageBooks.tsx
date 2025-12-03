@@ -113,12 +113,6 @@ const ManageBooks = () => {
       <div className="container mx-auto px-4 py-8">
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-4">
-            <Button variant="ghost" asChild>
-              <Link to="/admin">
-                <ArrowLeft className="w-4 h-4 mr-2" />
-                Dashboard
-              </Link>
-            </Button>
             <div>
               <h1 className="text-3xl font-bold">Manage Books</h1>
               <p className="text-muted-foreground">View, edit, and delete books</p>
