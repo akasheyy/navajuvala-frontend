@@ -8,6 +8,17 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
 import { ArrowLeft, User, BookOpen, Calendar, Trash2, Check } from "lucide-react";
+import {
+  AlertDialog,
+  AlertDialogTrigger,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogCancel,
+  AlertDialogAction,
+} from "@/components/ui/alert-dialog";
 
 const BorrowerDetail = () => {
   const { id } = useParams();
@@ -265,9 +276,36 @@ const BorrowerDetail = () => {
                 <Check className="w-4 h-4" /> Mark Returned
               </Button>
             )}
-            <Button onClick={handleDelete} variant="destructive" className="flex items-center gap-2">
-              <Trash2 className="w-4 h-4" /> Delete
-            </Button>
+            <AlertDialog>
+  <AlertDialogTrigger asChild>
+    <Button variant="destructive" className="flex items-center gap-2">
+      <Trash2 className="w-4 h-4" />
+      Delete
+    </Button>
+  </AlertDialogTrigger>
+
+  <AlertDialogContent>
+    <AlertDialogHeader>
+      <AlertDialogTitle>Delete Borrow Record?</AlertDialogTitle>
+      <AlertDialogDescription>
+        This action cannot be undone.  
+        The record will be permanently removed from the system.
+      </AlertDialogDescription>
+    </AlertDialogHeader>
+
+    <AlertDialogFooter>
+      <AlertDialogCancel>Cancel</AlertDialogCancel>
+
+      <AlertDialogAction
+        className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+        onClick={handleDelete}
+      >
+        Confirm Delete
+      </AlertDialogAction>
+    </AlertDialogFooter>
+  </AlertDialogContent>
+</AlertDialog>
+
           </div>
         </div>
     </div>
