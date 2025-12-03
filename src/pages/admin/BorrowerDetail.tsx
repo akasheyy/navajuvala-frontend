@@ -92,21 +92,11 @@ const BorrowerDetail = () => {
       <Navbar />
       <div className="container mx-auto px-4 py-8">
         <div className="flex items-center justify-between mb-6">
-          <div>
-            <h1 className="text-2xl font-bold">Borrow Record</h1>
-          </div>
           <div className="flex items-center gap-2">
             <Button variant="ghost" asChild>
               <Link to="/admin/borrow-records">Back to records</Link>
             </Button>
-            {!record.returned && (
-              <Button onClick={handleMarkReturned} className="flex items-center gap-2" variant="secondary">
-                <Check className="w-4 h-4" /> Mark Returned
-              </Button>
-            )}
-            <Button onClick={handleDelete} variant="destructive" className="flex items-center gap-2">
-              <Trash2 className="w-4 h-4" /> Delete
-            </Button>
+            
           </div>
         </div>
 
@@ -243,25 +233,43 @@ const BorrowerDetail = () => {
                     </div>
                   </div>
 
-                  {record.returned && (
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 rounded-full bg-green-500 mt-2" />
-                      <div>
-                        <div className="text-sm text-muted-foreground">Returned at</div>
-                        <div className="font-medium">{new Date(record.borrowDate).toLocaleString("en-IN", {
-  timeZone: "Asia/Kolkata",
-  hour12: true,
-})
-}</div>
-                      </div>
-                    </div>
-                  )}
+                  {record.returned && record.returnedAt && (
+  <div className="flex items-start gap-3">
+    <div className="w-2 h-2 rounded-full bg-green-500 mt-2" />
+    <div>
+      <div className="text-sm text-muted-foreground">Returned at</div>
+      <div className="font-medium">
+        {new Date(record.returnedAt).toLocaleString("en-IN", {
+          timeZone: "Asia/Kolkata",
+          hour12: true,
+        })}
+      </div>
+    </div>
+  </div>
+)}
                 </div>
               </CardContent>
             </Card>
           </div>
         </div>
+        
       </div>
+
+      <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center gap-2">
+            <Button variant="ghost" asChild>
+              <Link to="/admin/borrow-records"></Link>
+            </Button>
+            {!record.returned && (
+              <Button onClick={handleMarkReturned} className="flex items-center gap-2" variant="secondary">
+                <Check className="w-4 h-4" /> Mark Returned
+              </Button>
+            )}
+            <Button onClick={handleDelete} variant="destructive" className="flex items-center gap-2">
+              <Trash2 className="w-4 h-4" /> Delete
+            </Button>
+          </div>
+        </div>
     </div>
   );
 };
