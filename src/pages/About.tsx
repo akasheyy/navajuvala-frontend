@@ -77,7 +77,7 @@ const About = () => {
             <h2 className="text-2xl font-semibold">Contact Us</h2>
             <p className="text-muted-foreground">
               📍 Pandikkad, Malappuram, Kerala  
-              <br />📞 Phone: +91 XXXXX XXXXX  
+              <br />📞 Phone: +91 81138 27842    
               <br />✉️ Email: info@navajuvala.org
             </p>
           </CardContent>
