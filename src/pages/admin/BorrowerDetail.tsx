@@ -88,7 +88,7 @@ const BorrowerDetail = () => {
   };
 
   const handleDelete = async () => {
-      try {
+    try {
       await deleteBorrowRecord(record._id);
       toast({ title: "Deleted", description: "Borrow record deleted" });
       navigate("/admin/borrow-records");

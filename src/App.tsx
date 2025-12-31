@@ -13,7 +13,9 @@ import NotFound from "./pages/NotFound";
 import BorrowForm from "./pages/admin/BorrowForm";
 import BorrowRecords from "./pages/admin/BorrowRecords";
 import BorrowerDetail from "@/pages/admin/BorrowerDetail";
-import About from "@/pages/About";
+// import About from "@/pages/About";
+import Search from "@/pages/search";
+import LikedBooks from "@/pages/LikedBooks";
 
 const queryClient = new QueryClient();
 
@@ -35,8 +37,9 @@ const App = () => (
           <Route path="/admin/books/borrow/:id" element={<BorrowForm />} />
           <Route path="/admin/borrow-records" element={<BorrowRecords />} />
           <Route path="/admin/borrow/:id" element={<BorrowerDetail />} />
-          <Route path="/about" element={<About />} />
-
+          {/* <Route path="/about" element={<About />} /> */}
+          <Route path="/search" element={<Search/>}/>
+          <Route path="/liked" element={<LikedBooks />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
