@@ -1,6 +1,7 @@
 // src/lib/api.ts
 //const API_BASE_URL = 'http://localhost:5000/api';
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const baseUrl = import.meta.env.VITE_API_URL;
+const API_BASE_URL = baseUrl.endsWith('/api') ? baseUrl : `${baseUrl}/api`;
 
 
 
@@ -208,7 +209,7 @@ export const getDashboardStats = async (): Promise<DashboardStats> => {
 
 // Public API functions (if needed for public pages)
 export async function getPublicBooks() {
-  const res = await fetch("http://localhost:5000/api/books");
+  const res = await fetch(`${API_BASE_URL}/books`);
   if (!res.ok) throw new Error("Failed to fetch books");
   return res.json(); // ✅ returns ARRAY now, not paginated object
 }
