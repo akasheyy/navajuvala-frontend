@@ -1,7 +1,7 @@
 // src/lib/api.ts
-const API_BASE_URL = 'http://localhost:5000/api';
-// const baseUrl = import.meta.env.VITE_API_URL;
-//const API_BASE_URL = baseUrl.endsWith('/api') ? baseUrl : `${baseUrl}/api`;
+//const API_BASE_URL = 'http://localhost:5000/api';
+const baseUrl = import.meta.env.VITE_API_URL;
+const API_BASE_URL = baseUrl.endsWith('/api') ? baseUrl : `${baseUrl}/api`;
 
 
 
